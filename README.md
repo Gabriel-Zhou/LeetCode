@@ -46,6 +46,7 @@ Command line usage requires node module "amqplib" to run.
 1. Sending provenance notification
 (1) As FILE
 
+
     var komadu_client = require('client-core-messaging-js');
     sendNotification = komadu_client.sendNotification;
     var config = require('config/komadu.json');
