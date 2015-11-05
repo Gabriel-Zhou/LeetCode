@@ -1,13 +1,46 @@
-Scapegoat
+Komadu JavaScript messaging client
 =========
 
-A small library providing utility methods to `escape` and `unescape` HTML entities
+A lightweight javascript messaging client for Komadu Provenance Toolset. This client supports sending provenance notifications and querying provenance graph. It provides command line usage and easy-to-use npm module usage which can be integrated into web UIs or other infrastructure. Please refer to github Komadu repository https://github.com/Data-to-Insight-Center/komadu or find this module on http://npmjs.org website with module name "client-core-messaging-js".
 
 ## Installation
 
-  npm install scapegoat --save
+  npm install client-core-messaging-js --save
 
-## Usage
+## Usage -- command line usage
+
+Command line usage requires node module "amqplib" to run.
+
+  npm install amqplib --save
+  
+  //Sending provenance notifications
+  node ./bin/sendNotification.js <komadu.json> <notification xml>
+
+  //Querying provenance graph
+  node ./bin/query.js <komadu.json> <query xml> <output path>
+  
+  One example configuration json file for Komadu messaging client is as below:
+  
+  {
+     "messaging":
+     {
+        "username":"guest",
+        "password":"guest",
+        "hostname":"localhost",
+        "hostport":"5672",
+        "virtualhost":"/",
+        "exchangename":"KomaduExchange",
+        "queuename":"KomaduQueue",
+        "routingkey":"KomaduKey"
+     },
+     "schema":
+     {
+        "ingest":"/Users/quzhou/Komadu/komadu/client-core-messaging/config/komadu_ingest_schema.xsd",
+        "query":"/Users/quzhou/Komadu/komadu/client-core-messaging/config/komadu_query_schema.xsd"
+     }
+}
+
+## Usage -- node module usage
 
   var scapegoat = require('scapegoat')
       escape = scapegoat.escape,
