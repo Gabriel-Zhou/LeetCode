@@ -5,7 +5,7 @@ A lightweight javascript messaging client for Komadu Provenance Toolset. This cl
 
 ## Installation
 
-  npm install client-core-messaging-js --save
+    npm install client-core-messaging-js --save
 
 ## Usage -- command line usage
 
