@@ -43,7 +43,7 @@ Command line usage requires node module "amqplib" to run.
 
 ## Usage -- node module usage
 
-# Sending provenance notification
+### Sending provenance notification
 
 (1) As FILE
 
@@ -62,7 +62,7 @@ Command line usage requires node module "amqplib" to run.
     sendNotification(config, notification, {"type":"STRING"});
 
 
-# Querying provnenance graph
+### Querying provnenance graph
 
 (1) Query as FILE
 
