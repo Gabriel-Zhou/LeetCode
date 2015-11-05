@@ -61,6 +61,7 @@ Command line usage requires node module "amqplib" to run.
     var notification = <notification xml string>;
     sendNotification(config, notification, {"type":"STRING"});
 
+
 2. Querying provnenance graph
 
 (1) Query as FILE
