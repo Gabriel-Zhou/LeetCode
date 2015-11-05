@@ -61,15 +61,34 @@ Command line usage requires node module "amqplib" to run.
     var notification = <notification xml string>;
     sendNotification(config, notification, {"type":"STRING"});
 
+2. Querying provnenance graph
+
+(1) Query as FILE
+
+    var komadu_client = require('client-core-messaging-js');
+    query = komadu_client.query;
+    var config = require('config/komadu.json');
+    var query = <query xml path>;
+    var output = <output file path>;
+    query(config, query, output, {"type":"FILE"});
+    
+(2) Query as STRING
+
+    var komadu_client = require('client-core-messaging-js');
+    query = komadu_client.query;
+    var config = require('config/komadu.json');
+    var query = <query xml STRING>;
+    var output = <output file path>;
+    query(config, query, output, {"type":"STRING"});
+
 ## Tests
     
     npm test
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style.
-Add unit tests for any new or changed functionality. Lint and test your code.
+This node module is under ISC licence, attributing to Data to Insight Center, Indiana University Bloomington. 
 
 ## Release History
 
-* 0.1.0 Initial release
+* 1.0.0 Initial release
