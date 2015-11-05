@@ -11,15 +11,22 @@ A lightweight javascript messaging client for Komadu Provenance Toolset. This cl
 
 Command line usage requires node module "amqplib" to run.
 
+
   npm install amqplib --save
+
   
   //Sending provenance notifications
   node ./bin/sendNotification.js <komadu.json> <notification xml>
 
+
+
   //Querying provenance graph
   node ./bin/query.js <komadu.json> <query xml> <output path>
+
+
   
   One example configuration json file for Komadu messaging client is as below:
+
   
   {
      "messaging":
@@ -39,6 +46,7 @@ Command line usage requires node module "amqplib" to run.
         "query":"/Users/quzhou/Komadu/komadu/client-core-messaging/config/komadu_query_schema.xsd"
      }
 }
+
 
 ## Usage -- node module usage
 
