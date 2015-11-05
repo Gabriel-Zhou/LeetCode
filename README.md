@@ -43,15 +43,21 @@ Command line usage requires node module "amqplib" to run.
 
 ## Usage -- node module usage
 
-  var scapegoat = require('scapegoat')
-      escape = scapegoat.escape,
-      unescape = scapegoat.unescape;
+1. Sending provenance notification
+(1) As FILE
 
-  var html = '<h1>Hello World</h1>',
-      escaped = escape(html),
-      unescaped = unescape(escaped);
-
-  console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
+    var komadu_client = require('client-core-messaging-js');
+    sendNotification = komadu_client.sendNotification;
+    var config = require('config/komadu.json');
+    var notification = <notification xml path>;
+    sendNotification(config, notification, {"type":"FILE"});
+    
+(2) As STRING
+    var komadu_client = require('client-core-messaging-js');
+    sendNotification = komadu_client.sendNotification;
+    var config = require('config/komadu.json');
+    var notification = <notification xml string>;
+    sendNotification(config, notification, {"type":"STRING"});
 
 ## Tests
     
