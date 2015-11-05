@@ -11,12 +11,11 @@ A lightweight javascript messaging client for Komadu Provenance Toolset. This cl
 
 Command line usage requires node module "amqplib" to run.
 
+    npm install amqplib --save
 
-  npm install amqplib --save
-
-  
-  //Sending provenance notifications
-  node ./bin/sendNotification.js <komadu.json> <notification xml>
+    //Sending provenance notifications
+    
+    node ./bin/sendNotification.js <komadu.json> <notification xml>
 
 
 
