@@ -35,8 +35,8 @@ Command line usage requires node module "amqplib" to run.
      },
      "schema":
      {
-        "ingest":"/Users/quzhou/Komadu/komadu/client-core-messaging/config/komadu_ingest_schema.xsd",
-        "query":"/Users/quzhou/Komadu/komadu/client-core-messaging/config/komadu_query_schema.xsd"
+        "ingest":"$CLIENT_HOME/config/komadu_ingest_schema.xsd",
+        "query":"$CLIENT_HOME/config/komadu_query_schema.xsd"
      }
     }
 
@@ -54,8 +54,8 @@ Command line usage requires node module "amqplib" to run.
   console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
 
 ## Tests
-
-  npm test
+    
+    npm test
 
 ## Contributing
 
